@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const userRoute=require('./routes/user');
 const postRoute=require('./routes/post');
 const cors=require('cors')
-let port=process.env.port;
+let port=process.env.PORT;
 //connected to mongoose
 const uri = "mongodb+srv://admin:admin@cluster0.n23bk.mongodb.net/instagram?retryWrites=true&w=majority";
 mongoose.Promise=global.Promise;

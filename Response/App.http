@@ -1,0 +1,13 @@
+@host =http://localhost:5000
+
+//Get Post
+###
+
+GET {{host}}/post/ HTTP/1.1
+
+###
+
+GET {{host}}/post/addPost/ HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDY5ZDFiZTUzYmY4NjMzYmNhNGMzYzEiLCJpYXQiOjE2MTc1NDc3OTV9.0o-6TE1VZPFz1Svwb9Otr9vn5xS41Jaqc8JzFVCAk94
+

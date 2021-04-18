@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const userRoute=require('./routes/user');
 const postRoute=require('./routes/post');
 const cors=require('cors')
-let port=5000||process.env.port;
+let port=process.env.port;
 //connected to mongoose
 const uri = "mongodb+srv://admin:admin@cluster0.n23bk.mongodb.net/instagram?retryWrites=true&w=majority";
 mongoose.Promise=global.Promise;
@@ -34,7 +34,7 @@ app.use(cors())
 app.use(express.json());
 app.use('/user/',userRoute)
 app.use('/post/',postRoute)
-console.log(port);
+console.log('port',port);
 const host = '0.0.0.0';
 app.listen(port,host,()=>{
     console.log(`Server running on ${port}`)

@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const userRoute=require('./routes/user');
 const postRoute=require('./routes/post');
 const cors=require('cors')
-
+let port=5000||process.env.port;
 //connected to mongoose
 const uri = "mongodb+srv://admin:admin@cluster0.n23bk.mongodb.net/instagram?retryWrites=true&w=majority";
 mongoose.Promise=global.Promise;
@@ -35,8 +35,6 @@ app.use(express.json());
 app.use('/user/',userRoute)
 app.use('/post/',postRoute)
 
-
-
-app.listen(5000,()=>{
-    console.log('Server running on 5000')
+app.listen(port,()=>{
+    console.log(`Server running on ${port}`)
 })

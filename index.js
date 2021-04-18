@@ -34,7 +34,8 @@ app.use(cors())
 app.use(express.json());
 app.use('/user/',userRoute)
 app.use('/post/',postRoute)
-
-app.listen(port,()=>{
+console.log(port);
+const host = '0.0.0.0';
+app.listen(port,host,()=>{
     console.log(`Server running on ${port}`)
 })
